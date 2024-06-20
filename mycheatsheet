@@ -1,0 +1,99 @@
+VIM:
+Navigation:
+h, j, k, l: Move left, down, up, right respectively.
+w, e: Move forward by word (w) or to the end of a word (e).
+b: Move backward by word.
+0: Move to the beginning of the line.
+$: Move to the end of the line.
+gg: Move to the beginning of the file.
+G: Move to the end of the file.
+Ctrl+f: Move forward one screen.
+Ctrl+b: Move backward one screen.
+%: Jump to matching parenthesis or bracket.
+Editing:
+i: Insert before the cursor.
+a: Insert after the cursor.
+I: Insert at the beginning of the line.
+A: Insert at the end of the line.
+o: Open a new line below the current line.
+O: Open a new line above the current line.
+dd: Delete (cut) the current line.
+yy: Yank (copy) the current line.
+p: Paste after the cursor.
+P: Paste before the cursor.
+u: Undo the last change.
+Ctrl+r: Redo the last undone change.
+.: Repeat the last command.
+Search and Replace:
+/pattern: Search forward for the pattern.
+?pattern: Search backward for the pattern.
+n: Jump to the next match.
+N: Jump to the previous match.
+/old/new/g: Replace 'old' with 'new' globally in the current line.
+:%s/old/new/g: Replace 'old' with 'new' globally in the entire file.
+Saving and Exiting:
+: Save the file (write).
+: Quit Vim.
+!: Quit without saving (force quit).
+or
+: Save and quit.
+Miscellaneous:
+v: Enter visual mode to select text.
+V: Enter visual line mode (selects whole lines).
+Ctrl+v: Enter visual block mode (select rectangular blocks).
+yy: Yank (copy) the selected text.
+dd: Delete (cut) the selected text.
+J: Join the current line with the next line.
+***: Search for the word under the cursor.
+Exiting Vim:
+If you find yourself accidentally in Vim and want to exit without saving changes:
+Press Esc to ensure you are in normal mode.
+Type
+! and press Enter to quit without saving.
+
+
+GIT:
+Configuration:
+git config --global user.name "Your Name": Set the name that will be attached to your commits.
+git config --global user.email "youremail@example.com": Set the email address that will be attached to your commits.
+git config --list: List all the Git configurations you have set.
+Creating Repositories:
+git init: Initialize a new Git repository in the current directory.
+git clone <repository_url>: Clone an existing repository from a remote server to your local machine.
+Basic Workflow:
+git status: Check the status of your working directory and staging area.
+git add <file(s)>: Add file(s) to the staging area. You can also use git add . to add all changes.
+git commit -m "Commit message": Commit your staged changes with a descriptive message.
+git commit -am "Commit message": Add all modified files to the staging area and commit them in one step (this skips the git add command).
+Branching and Merging:
+git branch: List all local branches. Add -r to see remote branches as well.
+git branch <branch_name>: Create a new branch.
+git checkout <branch_name>: Switch to a different branch.
+git merge <branch_name>: Merge changes from <branch_name> into the current branch.
+git branch -d <branch_name>: Delete a branch.
+Remote Repositories:
+git remote: List all remote repositories associated with your local repository.
+git remote -v: List all remote repositories with their URLs.
+git fetch: Fetch changes from the remote repository.
+git pull: Fetch changes from the remote repository and merge them into the current branch.
+git push <remote_name> <branch_name>: Push your commits to the remote repository.
+Undoing Changes:
+git checkout -- <file(s)>: Discard changes in the working directory for <file(s)>.
+git reset HEAD <file(s)>: Unstage <file(s)> from the staging area.
+git reset --hard HEAD: Discard all changes in the working directory and staging area to match the last commit.
+git revert <commit_hash>: Create a new commit that undoes changes made in <commit_hash>.
+Viewing History:
+git log: Display the commit history.
+git log --oneline: Condense each commit to a single line.
+git log --author="Author Name": Show commits by a specific author.
+git diff: Show changes between commits, commit and working tree, etc.
+git show <commit_hash>: Show information about a specific commit.
+Git Tags:
+git tag: List all tags.
+git tag <tag_name>: Create a new tag at the current commit.
+git tag -a <tag_name> -m "Tag message": Create an annotated tag.
+git push origin <tag_name>: Push a tag to the remote repository.
+Advanced Topics:
+git stash: Stash changes in the working directory for later use.
+git rebase: Reapply commits on top of another base tip.
+git cherry-pick <commit_hash>: Apply changes from a specific commit.
